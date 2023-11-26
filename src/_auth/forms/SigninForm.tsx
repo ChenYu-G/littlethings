@@ -62,7 +62,7 @@ const SigninForm = () => {
 		<Form {...form}>
 			<div className='sm:w-420 flex-center flex-col mb-16'>
 				<img
-					src='/public/assets/images/logo_transparent.png'
+					src='./../../../public/assets/images/logo2.png'
 					alt='logo'
 					className='invert-white'
 					width={300}
