@@ -1,7 +1,6 @@
 import { INewPost, INewUser, IUpdatePost, IUpdateUser } from '@/types'
 import { ID, Query } from 'appwrite'
 import { account, appwriteConfig, avatars, databases, storage } from './config'
-import { Url } from 'url'
 
 // --------------------------------
 // auth
@@ -26,7 +25,7 @@ export async function createUserAccount(user: INewUser) {
 			username: user.username,
 			imageUrl: avatarUrl,
 		})
-		return newAccount
+		return newUser
 	} catch (error) {
 		console.log(error)
 		return error

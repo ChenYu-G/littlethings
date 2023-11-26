@@ -8,7 +8,6 @@ import { useToast } from '@/components/ui/use-toast'
 import {
 	Form,
 	FormControl,
-	FormDescription,
 	FormField,
 	FormItem,
 	FormLabel,
@@ -26,11 +25,10 @@ import { useUserContext } from '@/context/AuthContext'
 const SignupForm = () => {
 	const navigate = useNavigate()
 	const { toast } = useToast()
-	const { checkAuthUser, isLoading: isUserLoading } = useUserContext()
+	const { checkAuthUser } = useUserContext()
 	const { mutateAsync: createUserAccount, isPending: isCreatingUser } =
 		useCreateUserAccountMutation()
-	const { mutateAsync: signInAccount, isPending: isSigningIn } =
-		useSignInAccountMutation()
+	const { mutateAsync: signInAccount } = useSignInAccountMutation()
 
 	const form = useForm<z.infer<typeof SignupValidation>>({
 		resolver: zodResolver(SignupValidation),
