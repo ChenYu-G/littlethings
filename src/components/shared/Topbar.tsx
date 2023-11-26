@@ -3,6 +3,8 @@ import { Button } from '../ui/button'
 import { useSignOutAccountMutation } from '@/lib/react-query/queriesAndMutations'
 import { useEffect } from 'react'
 import { useUserContext } from '@/context/AuthContext'
+import logo from '/Users/captain/Documents/react-build/littlethings/public/assets/images/logo_transparent.png'
+
 const Topbar = () => {
 	const { mutate: signOut, isSuccess } = useSignOutAccountMutation()
 	const navigate = useNavigate()
@@ -17,12 +19,7 @@ const Topbar = () => {
 		<section className='topbar'>
 			<div className='flex-between py-4 px-5'>
 				<Link to='/' className='flex gap-3 items-center'>
-					<img
-						src='/public/assets/images/logo_transparent.png'
-						alt='logo'
-						width={130}
-						height={325}
-					/>
+					<img src={logo} alt='logo' width={130} height={325} />
 				</Link>
 				<div className='flex gap-4'>
 					<Button

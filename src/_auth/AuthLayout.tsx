@@ -1,5 +1,5 @@
 import { Outlet, Navigate } from 'react-router-dom'
-
+import side from '../../public/assets/images/side.png'
 const AuthLayout = () => {
 	const isAuthenticated = false
 
@@ -13,7 +13,7 @@ const AuthLayout = () => {
 						<Outlet />
 					</section>
 					<img
-						src='./assets/images/side.png'
+						src={side}
 						alt='side-img'
 						className='hidden xl:block h-screen w-1/2 object-cover bg-no-repeat'
 					/>

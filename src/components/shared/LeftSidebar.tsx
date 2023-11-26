@@ -5,6 +5,7 @@ import { useEffect } from 'react'
 import { useUserContext } from '@/context/AuthContext'
 import { sidebarLinks } from '@/constants'
 import { INavLink } from '@/types'
+import logo from '/Users/captain/Documents/react-build/littlethings/public/assets/images/logo_transparent.png'
 
 const LeftSidebar = () => {
 	const { pathname } = useLocation()
@@ -20,12 +21,7 @@ const LeftSidebar = () => {
 		<nav className='leftsidebar'>
 			<div className='flex flex-col gap-11'>
 				<Link to='/' className='flex gap-3 items-center'>
-					<img
-						src='/public/assets/images/logo_transparent.png'
-						alt='logo'
-						width={170}
-						height={36}
-					/>
+					<img src={logo} alt='logo' width={170} height={36} />
 				</Link>
 				<Link to={`/profile/${user.id}`} className='flex gap-3 items-center'>
 					<img
